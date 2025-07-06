@@ -1,0 +1,43 @@
+##Authentication And Authorization with Audit Log
+Create a REST Controller to implement following APIs.
+
+##Project Setup
+● Set up a Spring Boot project with necessary dependencies for web and
+database access.
+● Configure the PostgreSQL database connection properties in the
+application.
+
+##User CRUD API
+API To Create, Find, Update, Delete and List Users. The API should accept user
+details like Name, email, contact number, address along with their Role (You
+should add a default role such as “Admin” as seed data to the system).
+
+##User Login API
+Login API should accept a payload with username and password. The
+response payload should include the login status, access token and username
+for every successful authentication. Also, include authentication error status
+and error message for failed authentication request.
+
+##Role CRUD API
+API To Create, Find, Update, Delete and List Roles
+● Create two more roles apart from seed data. “Manager” and “Normal User”
+● Only Manager and Seed Role Admin can perform CRUD activities
+● Normal users will have only view permissions.
+● Limit APIs based on Roles using Spring Security
+
+
+##Audit API
+● Log every API call to the database.
+● Provide an API which returns audit data of API logs from the database. The
+log should include api endpoint, request and response payload, user and
+the request time.
+
+##Guidelines
+❖ You don’t have to implement the UI and can assume that the front-end application is
+already developed and will make API requests to your backend.
+❖ Make sure that API can be tested using Postman
+❖ Framework : Spring boot
+❖ Protocol : Rest API
+❖ Access Token : JWT
+❖ Database : PostgreSQL
+❖ Documentation : Swagger Documentation with Readme
