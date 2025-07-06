@@ -14,10 +14,12 @@ CREATE TABLE users (
     role_id INT NOT NULL,
     FOREIGN KEY (role_id) REFERENCES roles(id)
 );
+
 CREATE TABLE roles (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL UNIQUE
 );
+
 CREATE TABLE api_audit_logs (
     id SERIAL PRIMARY KEY,
     endpoint VARCHAR(255) NOT NULL,
